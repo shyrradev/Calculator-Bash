@@ -1,4 +1,6 @@
 #!/bin/bash
+# calculator script
+# created by shyrra
 
 addition () {
     echo $(($1 + $2))
@@ -9,6 +11,7 @@ substraction () {
 multiplication () {
     echo $(($1 * $2))
 }
+
 division () {
     if [ $2 -eq 0 ]; then
     echo "cannot divide by zero. please enter valid numbers"
@@ -19,7 +22,7 @@ division () {
 exit () {
     exit 1
 }
-
+# main function
 main () {
     
     while true; do
@@ -30,7 +33,7 @@ main () {
     echo "4. division"
     echo "5. exit"
     read -p "enter your choice: " choice
-
+# switch case
 case $choice in 
     1) read -p "enter first number: " num1
         read -p "enter second number: " num2
